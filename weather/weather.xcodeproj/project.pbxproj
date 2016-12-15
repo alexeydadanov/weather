@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0C03AE181E01C5E20080ADAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C03AE171E01C5E20080ADAA /* AppDelegate.swift */; };
-		0C03AE1A1E01C5E20080ADAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C03AE191E01C5E20080ADAA /* ViewController.swift */; };
 		0C03AE1D1E01C5E20080ADAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C03AE1B1E01C5E20080ADAA /* Main.storyboard */; };
 		0C03AE1F1E01C5E20080ADAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C03AE1E1E01C5E20080ADAA /* Assets.xcassets */; };
 		0C03AE221E01C5E20080ADAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C03AE201E01C5E20080ADAA /* LaunchScreen.storyboard */; };
+		0C03AE4E1E01D7C30080ADAA /* WhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C03AE4D1E01D7C30080ADAA /* WhomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C03AE141E01C5E20080ADAA /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C03AE171E01C5E20080ADAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C03AE191E01C5E20080ADAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C03AE1C1E01C5E20080ADAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C03AE1E1E01C5E20080ADAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C03AE211E01C5E20080ADAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C03AE231E01C5E20080ADAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C03AE4D1E01D7C30080ADAA /* WhomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		0C03AE161E01C5E20080ADAA /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				0C03AE171E01C5E20080ADAA /* AppDelegate.swift */,
-				0C03AE191E01C5E20080ADAA /* ViewController.swift */,
+				0C03AE501E01D8500080ADAA /* View */,
+				0C03AE4F1E01D8280080ADAA /* ViewControllers */,
+				0C03AE511E01D8650080ADAA /* Helpers */,
+			);
+			path = weather;
+			sourceTree = "<group>";
+		};
+		0C03AE4F1E01D8280080ADAA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C03AE4D1E01D7C30080ADAA /* WhomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0C03AE501E01D8500080ADAA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				0C03AE1B1E01C5E20080ADAA /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0C03AE511E01D8650080ADAA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0C03AE171E01C5E20080ADAA /* AppDelegate.swift */,
 				0C03AE1E1E01C5E20080ADAA /* Assets.xcassets */,
 				0C03AE201E01C5E20080ADAA /* LaunchScreen.storyboard */,
 				0C03AE231E01C5E20080ADAA /* Info.plist */,
 			);
-			path = weather;
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C03AE1A1E01C5E20080ADAA /* ViewController.swift in Sources */,
+				0C03AE4E1E01D7C30080ADAA /* WhomeViewController.swift in Sources */,
 				0C03AE181E01C5E20080ADAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +326,7 @@
 				0C03AE281E01C5E20080ADAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
