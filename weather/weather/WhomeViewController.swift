@@ -7,29 +7,43 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class WhomeViewController: UIViewController {
-
+   
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var degreesLabel: UILabel!
+    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var wheaterLabel: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var uButton: UIButton!
+    @IBAction func updateButton(sender: UIButton) {
+        weather.downloadData() {
+             self.updateUI()
+        }
+    }
+    var weather = dataModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        weather.downloadData {
+            self.updateUI()
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        dateLabel.text = weather.date
+        degreesLabel.text = "\(weather.temp)"
+        cityLabel.text = weather.location
+        wheaterLabel.text = weather.weather
+        weatherImage.image = UIImage(named: weather.weather)
     }
-    */
-
 }
+
+
+
+
